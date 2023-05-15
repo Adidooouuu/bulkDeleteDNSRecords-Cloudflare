@@ -4,18 +4,18 @@ _Supprime, à la chaine, tous les enregistrements DNS d'une zone ciblée. Ne fon
 
 ## Table des matières
 
-1. [Versions](#versions-versions)
-2. [Mise en place](#mise-en-place-mep)
-3. [Références documentation officielle Cloudflare](#références-documentation-officielle-cloudflare-refs-doc)
+1. [Versions](#versions)
+2. [Mise en place](#mise-en-place)
+3. [Références documentation officielle Cloudflare](#références-documentation-officielle-cloudflare)
 
-## Versions {#versions}
+## Versions
 
 - **V1.0 (février 2023)** : ajoute tous les identifiants des enregistrements DNS dans une liste, page par page, puis boucle sur cette liste pour supprimer les enregistrements DNS ciblés.
   Ne prend actuellement pas en compte la limite requise de [1 200 requêtes toutes les 5 minutes](https://developers.cloudflare.com/fundamentals/api/reference/limits/), ce qui peut amener des erreurs 429 si la limite est excédée.
 
 ---
 
-## Mise en place {#mep}
+## Mise en place
 
 Dans le fichier [config.php](/config.php) fourni, entrer les trois valeurs nécessaires :
 
@@ -29,7 +29,7 @@ Lorsque tout est rempli, exécuter le script.
 
 ---
 
-## Références documentation officielle Cloudflare {#refs-doc}
+## Références documentation officielle Cloudflare
 
 [Limites de requêtes](https://developers.cloudflare.com/fundamentals/api/reference/limits/)<br>
 [Lister les enregistrements DNS](https://developers.cloudflare.com/api/operations/dns-records-for-a-zone-list-dns-records)<br>
