@@ -4,9 +4,9 @@ _Supprime, à la chaine, tous les enregistrements DNS d'une zone ciblée. Ne fon
 
 ## Table des matières
 
-1. [Versions](#versions)
-2. [Mise en place](#mep)
-3. [Références documentation officielle Cloudflare](#refs-doc)
+1. [Versions](#versions-versions)
+2. [Mise en place](#mise-en-place-mep)
+3. [Références documentation officielle Cloudflare](#références-documentation-officielle-cloudflare-refs-doc)
 
 ## Versions {#versions}
 
@@ -23,7 +23,7 @@ Dans le fichier [config.php](/config.php) fourni, entrer les trois valeurs néce
 - `HTTP_TOKEN_AUTH` : correspond à la clé d'API
 - `ZONE_ID` : la zone dans laquelle vous voulez effectuer la suppression à la chaine des domaines.
 
-**NE PAS TOUCHER AUX CLÉS, SEULEMENT À LEURS VALEURS SI BESOIN.**
+**NE PAS TOUCHER AUX CLÉS, SEULEMENT À LEURS VALEURS SI BESOIN.**<br>
 Tout s'obtient depuis votre tableau de bord Cloudflare.
 Lorsque tout est rempli, exécuter le script.
 
@@ -31,7 +31,7 @@ Lorsque tout est rempli, exécuter le script.
 
 ## Références documentation officielle Cloudflare {#refs-doc}
 
-[Limites de requêtes](https://developers.cloudflare.com/fundamentals/api/reference/limits/)
-[Lister les enregistrements DNS](https://developers.cloudflare.com/api/operations/dns-records-for-a-zone-list-dns-records)
+[Limites de requêtes](https://developers.cloudflare.com/fundamentals/api/reference/limits/)<br>
+[Lister les enregistrements DNS](https://developers.cloudflare.com/api/operations/dns-records-for-a-zone-list-dns-records)<br>
 [Supprimer les enregistrements DNS](https://developers.cloudflare.com/api/operations/dns-records-for-a-zone-delete-dns-record)
 
