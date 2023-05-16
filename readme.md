@@ -19,7 +19,7 @@ _Supprime, à la chaine, tous les enregistrements DNS d'une zone ciblée. Ne fon
 
 ## Mise en place
 
-Créer un fichier [config.php](/config.php) à la racine du projet. Si vous avez réussi, ce lien fonctionnera.
+Créer un fichier "config.php" à la racine du projet.
 Dans ce fichier, entrer les trois valeurs nécessaires à partir de ce modèle :
 
 ```php
