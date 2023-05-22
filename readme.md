@@ -12,7 +12,7 @@ _Supprime, à la chaine, tous les enregistrements DNS d'une zone ciblée. Ne fon
 
 ## Versions
 
-- **V1.0 (février 2023)** : ajoute tous les identifiants des enregistrements DNS dans une liste, page par page, puis boucle sur cette liste pour supprimer les enregistrements DNS ciblés.
+- **V1.0 (février 2023)** : ajoute tous les identifiants des enregistrements DNS dans un tableau, page par page, puis boucle sur ce tableau pour supprimer les enregistrements DNS ciblés.
   Ne prend actuellement pas en compte la limite requise de [1 200 requêtes toutes les 5 minutes](https://developers.cloudflare.com/fundamentals/api/reference/limits/), ce qui peut amener des erreurs 429 si la limite est excédée.
 
 ---
@@ -31,7 +31,7 @@ Dans ce fichier, entrer les trois valeurs nécessaires à partir de ce modèle :
 ```
 
 - `X_AUTH_EMAIL` : identifiant de compte
-- `HTTP_TOKEN_AUTH` : autorise l'API à effectuer les actions pour laquelle cette clé a été paramétrée
+- `HTTP_TOKEN_AUTH` : autorise l'API à effectuer les actions suivantes : toutes les zones - DNS - modifier
 - `ZONE_ID` : la zone dans laquelle vous voulez effectuer la suppression à la chaine des enregistrements de domaines
 
 **NE PAS TOUCHER AUX CLÉS, SEULEMENT À LEURS VALEURS SI BESOIN.**<br>
@@ -46,3 +46,4 @@ Lorsque tout est rempli, exécuter le script.
 [Limites de requêtes](https://developers.cloudflare.com/fundamentals/api/reference/limits/)<br>
 [Lister les enregistrements DNS](https://developers.cloudflare.com/api/operations/dns-records-for-a-zone-list-dns-records)<br>
 [Supprimer les enregistrements DNS](https://developers.cloudflare.com/api/operations/dns-records-for-a-zone-delete-dns-record)
+
