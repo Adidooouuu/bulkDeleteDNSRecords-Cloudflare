@@ -1,26 +1,27 @@
-# Suppression en masse des enregistrements DNS d'une zone - API Cloudflare
+# Bulk Delete DNS Records on a zone - Cloudflare API
 
-_Supprime, à la chaine, tous les enregistrements DNS d'une zone ciblée. Ne fonctionne que pour Cloudflare._
+_Bulk deleting all DNS Records on a targeted zone. Working only with Cloufdlare services._
 
-## Table des matières
+New : [🇫🇷 French README](translations/readme-fr.md) available!
+
+## Table of contents
 
 1. [Versions](#versions)
-2. [Mise en place](#mise-en-place)
-3. [Références documentation officielle Cloudflare](#références-documentation-officielle-cloudflare)
+2. [Getting started](#getting-started)
+3. [Cloudflare official documentation references](#références-documentation-officielle-cloudflare)
 
 ---
 
 ## Versions
 
-- **V1.0 (février 2023)** : ajoute tous les identifiants des enregistrements DNS dans un tableau, page par page, puis boucle sur ce tableau pour supprimer les enregistrements DNS ciblés.
-  Ne prend actuellement pas en compte la limite requise de [1 200 requêtes toutes les 5 minutes](https://developers.cloudflare.com/fundamentals/api/reference/limits/), ce qui peut amener des erreurs 429 si la limite est excédée.
+- **V1.0 (February 2023)** : adds all the DNS records' identifiers in an array by looping over all pages, and loops over this array to delete the related DNS Records. For now, it doesn't consider the required limit of [1 200 requests every 5 minutes](https://developers.cloudflare.com/fundamentals/api/reference/limits/), which can cause an error 429 if the limit is exceeded.
 
 ---
 
-## Mise en place
+## Getting started
 
-Créer un fichier "config.php" à la racine du projet.
-Dans ce fichier, entrer les trois valeurs nécessaires à partir de ce modèle :
+Create a "config.php" file to the root of the project.
+In this file, add these three mandatory values according to this template :
 
 ```php
 <?php
@@ -30,20 +31,20 @@ Dans ce fichier, entrer les trois valeurs nécessaires à partir de ce modèle :
 ?>
 ```
 
-- `X_AUTH_EMAIL` : identifiant de compte
-- `HTTP_TOKEN_AUTH` : autorise l'API à effectuer les actions suivantes : toutes les zones - DNS - modifier
-- `ZONE_ID` : la zone dans laquelle vous voulez effectuer la suppression à la chaine des enregistrements de domaines
+- `X_AUTH_EMAIL` : Account ID
+- `HTTP_TOKEN_AUTH` : gives the API the right to act on this : all zones - DNS - modify
+- `ZONE_ID` : the targeted zone where all DNS records will be deleted
 
-**NE PAS TOUCHER AUX CLÉS, SEULEMENT À LEURS VALEURS SI BESOIN.**<br>
-Tout s'obtient depuis votre tableau de bord Cloudflare.<br>
-Lorsque tout est rempli, exécuter le script.
+**DON'T TOUCH THE KEYS, ONLY THE VALUES.**<br>
+Everything is available on your Cloudflare Dashboard.<br>
+When everything is filled, run the script.
 
 ---
 
-## Références documentation officielle Cloudflare
+## Cloudflare official documentation references
 
-[Trouver vos identifiants de compte et de zone](https://developers.cloudflare.com/fundamentals/get-started/basic-tasks/find-account-and-zone-ids/)<br>
-[Limites de requêtes](https://developers.cloudflare.com/fundamentals/api/reference/limits/)<br>
-[Lister les enregistrements DNS](https://developers.cloudflare.com/api/operations/dns-records-for-a-zone-list-dns-records)<br>
-[Supprimer les enregistrements DNS](https://developers.cloudflare.com/api/operations/dns-records-for-a-zone-delete-dns-record)
+[Find your account and zone ids](https://developers.cloudflare.com/fundamentals/get-started/basic-tasks/find-account-and-zone-ids/)<br>
+[Requests limits](https://developers.cloudflare.com/fundamentals/api/reference/limits/)<br>
+[List DNS records](https://developers.cloudflare.com/api/operations/dns-records-for-a-zone-list-dns-records)<br>
+[Delete DNS Records](https://developers.cloudflare.com/api/operations/dns-records-for-a-zone-delete-dns-record)
 
